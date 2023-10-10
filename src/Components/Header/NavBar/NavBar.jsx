@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
+import Logo from "./logo";
 
 
 
 const NavBar = () => {
     return (
         <div>
-            <nav>
-                <ul>
+            <nav className="flex lex-col md:flex-row justify-between items-center py-4 px-5   ">
+                <Logo></Logo>
+                <ul className="flex  flex-col md:flex-row  gap-12">
                     <li>
                         <NavLink
                             to="/"
@@ -15,7 +17,7 @@ const NavBar = () => {
                             }
                         >
                             Home
-                        </NavLink>;
+                        </NavLink>
 
                     </li>
 
@@ -27,7 +29,7 @@ const NavBar = () => {
                             }
                         >
                             Donation
-                        </NavLink>;
+                        </NavLink>
 
                     </li>
 
@@ -39,7 +41,7 @@ const NavBar = () => {
                             }
                         >
                             Statistics
-                        </NavLink>;
+                        </NavLink>
 
                     </li>
                 </ul>
