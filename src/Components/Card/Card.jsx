@@ -14,8 +14,10 @@ const Card = ({ card }) => {
             <div className="card card-compact bg-base-100 shadow-xl" style={cardStyle}>
                 <figure><img src={picture} alt="Shoes" /></figure>
                 <div className="card-body">
+
+
                     <p className="" >{category}</p>
-                    <h2 className="card-title">{title}</h2>
+                    <h2 className="card-title font-semibold">{title}</h2>
                 </div>
             </div>
         </div >
