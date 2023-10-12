@@ -11,11 +11,14 @@ import Root from './Components/Root/Root';
 import Home from './Pages/Home/Home';
 import Donation from './Pages/Donation/Donation';
 import Statistics from './Pages/Statistics/Statistics';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import SelectedCard from './Pages/SelectedCard/SelectedCard';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage />,
 
 
     children: [
@@ -31,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: "/Statistics",
         element: <Statistics></Statistics>,
+      },
+      {
+        path: "/cards/:id",
+        element: <SelectedCard></SelectedCard>,
+        loader: () => fetch('cards.json')
       },
     ],
   },
